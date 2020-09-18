@@ -22,7 +22,7 @@ export default function Portfolio() {
           languages.
         </p>
         <div className={portfolioStyles.center}>
-        <a className={utilStyles.imgLink} href='https://github.com/holdenmad/Lola-Tandem'>
+        <a className={utilStyles.imgLink} href='https://lola-tandem.netlify.app/'>
           <img
             src='lola_screenshot.png'
             alt='Screenshot of Lola tandem app'
@@ -38,7 +38,7 @@ export default function Portfolio() {
           gender and sexuality, and spark your curiosity.
         </p>
         <div className={portfolioStyles.center}>
-        <a className={utilStyles.imgLink} href='https://github.com/holdenmad/gender-explorer'>
+        <a className={utilStyles.imgLink} href='https://gender-explorer.netlify.app/'>
           <img
             src='gender_screenshot.png'
             alt='Screenshot of Gender Explorer app'
@@ -58,9 +58,9 @@ export default function Portfolio() {
           quotes with the color.
         </p>
         <div className={portfolioStyles.center}>
-        <a className={utilStyles.imgLink} href='https://github.com/holdenmad/colorful'>
+        <a className={utilStyles.imgLink} href='https://colorful-app.netlify.app/'>
           <img
-            src='colorful_screenshot.png'
+            src='colorful_screen.png'
             alt='Screenshot of Colorful app'
             className={portfolioStyles.image}
           />
@@ -71,9 +71,9 @@ export default function Portfolio() {
         <h2 className={portfolioStyles.projectHeading}>Recipes Blog</h2>
         <p>A simple recipes blog using Contentful and Bootstrap.</p>
         <div className={portfolioStyles.center}>
-        <a className={utilStyles.imgLink} href=''>
+        <a className={utilStyles.imgLink} href='https://hownottocook-group4.netlify.app/'>
           <img
-            src='recipes_screenshot.png'
+            src='recipes_screenshot1.png'
             alt='Screenshot of Recipes blog'
             className={portfolioStyles.image}
           />

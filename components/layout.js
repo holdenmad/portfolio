@@ -3,6 +3,8 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import Contact from './Contact'
+import Footer from './Footer'
+
 
 const name = 'Holden Madagame';
 export const siteTitle = 'Junior Developer';
@@ -44,6 +46,7 @@ export default function Layout({ children, home }) {
         </>
       </header>
       <main>{children}</main>
+      {/* <Footer/> */}
       {!home && (
         <div className={styles.backToHome}>
           <Link href='/'>

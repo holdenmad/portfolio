@@ -21,8 +21,9 @@ export default function Home() {
           musician with an eye for perfection, a drive to work for sustainable
           goals and to create beautiful things.
         </p>
-        <p>Take a look at <Link href='/portfolio'><a className={utilStyles.link}>my portfolio</a></Link>, and feel free to read more about my activism on <Link href='/portfolio'><a className={utilStyles.link}>my personal blog</a></Link></p>
+        <p>Take a look at <Link href='/portfolio'><a className={utilStyles.link}>my portfolio</a></Link>, and feel free to read more about my activism on <a href='http://holdenmadagame.com/191-2/' className={utilStyles.link}>my personal blog</a></p>
       </section>
+      
     </Layout>
   );
 }

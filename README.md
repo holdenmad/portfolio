@@ -1,8 +1,3 @@
-## To Do 
+# Holden Madagame - Portfolio
 
-- Put portfolio on front page? 
-- Change headshot? 
-- Have simple link to Portfolio (too simple?)
-
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This repository holds [my personal portfolio website](https://holdenmad.vercel.app/) made with [Next.js](https://nextjs.org/) and bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

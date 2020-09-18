@@ -50,3 +50,29 @@
   .lightText {
     color: #999;
   }
+
+
+  .link {
+    font-family: Courier, monospace;
+    background-color: black;
+    color: white;
+    padding-right: .2rem;
+    padding-left: .2rem;
+  }
+
+  .link:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .imgLink {
+    opacity: 1;
+  }
+
+  .imgLink:hover {
+    opacity: .5;
+  }
+
+  .ipa {
+    font-size: .8rem;
+  }

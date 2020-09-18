@@ -1,0 +1,26 @@
+.image {
+    width: 80%;
+}
+
+.center {
+    text-align: center;
+}
+
+.pageHeading {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.projectBlock {
+    padding-bottom: 2rem;
+    
+}
+
+.projectHeading {
+    text-align: left;
+}
+
+.projectSubHeading {
+    text-align: center;
+    text-decoration-style: double;
+}

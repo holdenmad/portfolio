@@ -1,0 +1,43 @@
+.socialmedia {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.navLink {
+    font-family: Courier, monospace;
+    background-color: black;
+    color: white;
+    padding-top: 0rem;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    padding-bottom: 0rem;
+  }
+
+  .navLink:hover {
+    background-color: white;
+    color: black;  
+  }
+
+  .navLinkSmall {
+    font-family: Courier, monospace;
+    font-size: .8rem;
+    background-color: black;
+    color: white;
+    padding-right: .3rem;
+    padding-left: .3rem;
+    padding-bottom: .2rem;
+  }
+
+  .navLinkSmall :hover {
+    background-color: white;
+    color: black;  
+  }
+
+  .socialmediaSmall {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }

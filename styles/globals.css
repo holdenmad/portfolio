@@ -9,6 +9,18 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  
+}
+
+a img {
+  color: inherit;
+  text-decoration: none;
+  opacity: 1;
+}
+
+a img :hover {
+  opacity: .5;
+  /*put transition here, fix hover*/
 }
 
 * {

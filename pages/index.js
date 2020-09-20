@@ -2,6 +2,22 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
+import homeStyles from '../styles/Home.module.css'
+
+const skills = [
+  'HTML5',
+  'CSS3',
+  'Vanilla JavaScript',
+  'Bootstrap',
+  'React.js',
+  'Node.js',
+  'APIs',
+  'SQL/NoSQL',
+  'Git',
+  'Scrum and Agile',
+  'UI Libraries',
+  'A11Y Accessibility'
+];
 
 export default function Home() {
   return (
@@ -12,8 +28,10 @@ export default function Home() {
       </Head>
       <section className={utilStyles.headingMd}>
         <p>
-          Hi, I'm Holden Madagame <span className={utilStyles.ipa}>/mƏ-'da-gƏ-mi/</span>. I'm a junior web developer with a background in opera
-          and trans/queer activism.{' '}
+          Hi, I'm Holden Madagame{' '}
+          <span className={utilStyles.ipa}>/mƏ-'da-gƏ-mi/</span>.{' '}
+          <b>I'm a junior web developer</b> with a background in opera and
+          trans/queer activism.{' '}
         </p>
         <p>
           I am a thoughtful, communicative, and professional young web developer
@@ -21,9 +39,26 @@ export default function Home() {
           musician with an eye for perfection, a drive to work for sustainable
           goals and to create beautiful things.
         </p>
-        <p>Take a look at <Link href='/portfolio'><a className={utilStyles.link}>my portfolio</a></Link>, and feel free to read more about my activism on <a href='http://holdenmadagame.com/191-2/' className={utilStyles.link}>my personal blog</a></p>
+        <p>
+          Take a look at{' '}
+          <Link href='/portfolio'>
+            <a className={utilStyles.link}>my portfolio</a>
+          </Link>
+          , and feel free to read more about my activism on{' '}
+          <a
+            href='http://holdenmadagame.com/191-2/'
+            className={utilStyles.link}
+          >
+            my personal blog
+          </a>
+        </p>
+        <hr className={homeStyles.homeHr}/>
+        <div className={homeStyles.center}>
+        <div className={homeStyles.skillsBlock}>
+          {skills.map(skill => <div className={homeStyles.skill}>// {skill}</div>)}
+        </div>
+        </div>
       </section>
-      
     </Layout>
   );
 }

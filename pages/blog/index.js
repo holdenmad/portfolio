@@ -3,6 +3,9 @@ import Link from "next/link";
 import Head from "next/head";
 import Layout from "../../components/layout";
 import utilStyles from "../../styles/utils.module.css";
+import blogStyles from "../../styles/blog.module.css";
+import Card from "../../components/Card";
+
 import fetch from "isomorphic-unfetch";
 
 export async function getServerSideProps() {
@@ -25,8 +28,10 @@ export default function Blog({ blog_posts }) {
         <title>Blog</title>
       </Head>
       <h1>Blog</h1>
-      <div>Where blog posts go</div>
-      <Link href="">This goes to a blog post</Link>
+      {blog_posts.map((post) => (
+        <Card key={post.id} post={post}></Card>
+      ))}
+      {/* <div>{blog_posts[0].BlogText}</div> */}
     </Layout>
   );
 }

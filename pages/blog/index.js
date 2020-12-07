@@ -5,7 +5,6 @@ import Layout from "../../components/layout";
 import utilStyles from "../../styles/utils.module.css";
 import blogStyles from "../../styles/blog.module.css";
 import Card from "../../components/Card";
-
 import fetch from "isomorphic-unfetch";
 
 export async function getServerSideProps() {
@@ -29,9 +28,8 @@ export default function Blog({ blog_posts }) {
       </Head>
       <h1>Blog</h1>
       {blog_posts.map((post) => (
-        <Card key={post.id} post={post}></Card>
+        <Card key={post.id} post={post} />
       ))}
-      {/* <div>{blog_posts[0].BlogText}</div> */}
     </Layout>
   );
 }

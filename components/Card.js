@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styles from "./Card.module.css";
 import utilStyles from "../styles/utils.module.css";
+import blogStyles from "../styles/blog.module.css";
 
 const Card = ({ post }) => {
   const formatDate = () => {
@@ -18,16 +19,14 @@ const Card = ({ post }) => {
   let postDate = formatDate(post.published_at);
 
   return (
-    <div className="card">
-      <h3 className="blog-title">{post.BlogTitle}</h3>
-      <span>
-        // Published: {postDate}
-      </span>
-      <div className="blog-link">
-        <Link href="/blog/[slug]" as={`/blog/${post.slug}`}>
-          // Go to post
-        </Link>
-      </div>
+    <div className={styles.card}>
+      <Link href="/blog/[slug]" as={`/blog/${post.slug}`}>
+        <h2 className={(utilStyles.link, styles.blogTitle)}>
+          {post.BlogTitle}
+        </h2>
+      </Link>
+
+      <span className={styles.date}>Published: {postDate}</span>
     </div>
   );
 };

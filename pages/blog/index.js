@@ -20,16 +20,21 @@ export async function getServerSideProps() {
 }
 
 export default function Blog({ blog_posts }) {
-  console.log(blog_posts);
   return (
     <Layout>
       <Head>
         <title>Blog</title>
       </Head>
-      <h1>Blog</h1>
+      <h1 className={blogStyles.pageHeading}>Blog</h1>
       {blog_posts.map((post) => (
         <Card key={post.id} post={post} />
       ))}
+
+      <div className={blogStyles.backToBlog}>
+        <Link href="/">
+          <a className={utilStyles.link}>← Back to home</a>
+        </Link>
+      </div>
     </Layout>
   );
 }

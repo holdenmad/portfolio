@@ -1,0 +1,31 @@
+.postBody {
+  width: 100%;
+}
+
+.blogCover {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.pageHeading {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+/* 
+//Decide whether to use text shadow or now
+.blogTitle {
+  text-shadow: 2px 2px #eee;
+} */
+
+.blogText:first-letter {
+  font-size: 3em;
+  font-family: "Courier New", Courier, monospace;
+  /* text-shadow: 2px 2px #eee; */
+  line-height: 70%;
+}
+
+.backToBlog {
+  margin: 3rem 0 0;
+}

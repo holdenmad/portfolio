@@ -28,6 +28,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className={utilStyles.headingMd}>
+        <hr className={homeStyles.homeHr} />
         <p>
           Hi, I'm Holden Madagame{" "}
           <span className={utilStyles.ipa}>/mƏ-'da-gƏ-mi/</span>.{" "}
@@ -40,19 +41,17 @@ export default function Home() {
           musician with an eye for perfection, a drive to work for sustainable
           goals and to create beautiful things.
         </p>
+        {/* 
+        //Should I include this on my dev site? How and where?
         <p>
-          Take a look at{" "}
-          <Link href="/portfolio">
-            <a className={utilStyles.link}>my portfolio</a>
-          </Link>
-          , and feel free to read more about my activism on{" "}
+          To read more about my activism checkout <br />
           <a
             href="http://holdenmadagame.com/191-2/"
             className={utilStyles.link}
           >
             my personal blog
           </a>
-        </p>
+        </p> */}
         <hr className={homeStyles.homeHr} />
         <div className={homeStyles.center}>
           <div className={homeStyles.skillsBlock}>

@@ -9,9 +9,9 @@ const Navigation = () => {
       <div className={utilStyles.navLink}>
         <Link href="/portfolio">Portfolio</Link>
       </div>
-      <div className={utilStyles.navLink}>
+      {/* <div className={utilStyles.navLink}>
         <Link href="/blog">Blog</Link>
-      </div>
+      </div> */}
     </div>
   );
 };

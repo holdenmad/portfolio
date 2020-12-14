@@ -1,4 +1,4 @@
-# Holden Madagame - Portfolio
+# Holden Madagame - Junior Developer Portfolio
 
 This repository holds [my personal portfolio website](https://holdenmad.vercel.app/) made with [Next.js](https://nextjs.org/). 
 

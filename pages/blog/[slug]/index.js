@@ -9,6 +9,7 @@ import utilStyles from "../../../styles/utils.module.css";
 import blogStyles from "../../../styles/blog.module.css";
 
 const { publicRuntimeConfig } = getConfig();
+const { AWS_URL } = process.env;
 const { API_URL } = process.env;
 
 export async function getServerSideProps(context) {
@@ -34,7 +35,7 @@ const Posts = ({ post }) => {
         <h1 className={blogStyles.blogTitle}>{post.BlogTitle}</h1>
         <img
           alt={post.BlogCover.alternativeText}
-          src={API_URL + post.BlogCover.url}
+          src={AWS_URL + post.BlogCover.url}
           className={blogStyles.blogCover}
         />
         <div></div>

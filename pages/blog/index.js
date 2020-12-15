@@ -20,6 +20,7 @@ export async function getServerSideProps() {
 }
 
 export default function Blog({ blog_posts }) {
+  //Testing to push for deployment
   return (
     <Layout>
       <Head>

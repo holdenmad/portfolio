@@ -1,6 +1,5 @@
 import Head from "next/head";
-import Link from "next/link";
-import Layout, { siteTitle } from "../components/layout";
+import Layout from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import homeStyles from "../styles/Home.module.css";
 
@@ -41,17 +40,6 @@ export default function Home() {
           musician with an eye for perfection, a drive to work for sustainable
           goals and to create beautiful things.
         </p>
-        {/* 
-        //Should I include this on my dev site? How and where?
-        <p>
-          To read more about my activism checkout <br />
-          <a
-            href="http://holdenmadagame.com/191-2/"
-            className={utilStyles.link}
-          >
-            my personal blog
-          </a>
-        </p> */}
         <hr className={homeStyles.homeHr} />
         <div className={homeStyles.center}>
           <div className={homeStyles.skillsBlock}>

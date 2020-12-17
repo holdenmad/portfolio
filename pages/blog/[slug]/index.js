@@ -4,7 +4,6 @@ import Head from "next/head";
 import Link from "next/link";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
-import { useRouter } from "next/router";
 import utilStyles from "../../../styles/utils.module.css";
 import blogStyles from "../../../styles/blog.module.css";
 
@@ -37,7 +36,6 @@ const Posts = ({ post }) => {
           src={post.BlogCover.url}
           className={blogStyles.blogCover}
         />
-        <div></div>
         <p className={blogStyles.blogText}>{post.BlogText}</p>
       </div>
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 import Layout from "../../components/layout";
@@ -42,7 +42,7 @@ export default function Portfolio() {
       <div className={portfolioStyles.projectBlock}>
         <h2 className={portfolioStyles.projectHeading}>Gender Explorer</h2>
         <p>
-          This app is an educational tool to encourage you to explorer your own
+          This app is an educational tool to encourage you to explore your own
           gender and sexuality, and spark your curiosity.
         </p>
         <div className={portfolioStyles.center}>

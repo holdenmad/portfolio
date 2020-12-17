@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 import Layout from "../../components/layout";
@@ -11,7 +11,6 @@ export async function getServerSideProps() {
   const { API_URL } = process.env;
   const res = await fetch(`${API_URL}/blog-posts`);
   const data = await res.json();
-
   return {
     props: {
       blog_posts: data,
@@ -20,7 +19,6 @@ export async function getServerSideProps() {
 }
 
 export default function Blog({ blog_posts }) {
-  //Testing to push for deployment
   return (
     <Layout>
       <Head>

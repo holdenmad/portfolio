@@ -9,6 +9,7 @@ const skills = [
   "Vanilla JavaScript",
   "Bootstrap",
   "React.js",
+  "Next.js",
   "React Native",
   "Node.js",
   "APIs",

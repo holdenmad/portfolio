@@ -10,10 +10,22 @@ import blogStyles from "../../../styles/blog.module.css";
 const { publicRuntimeConfig } = getConfig();
 const { API_URL } = process.env;
 
-export async function getServerSideProps(context) {
-  const { slug } = context.query;
+export async function getStaticPaths() {
+  // Call an external API endpoint to get posts
+  const res = await fetch(`${API_URL}/blog-posts`);
+  const posts = await res.json();
+  // Get the paths we want to pre-render based on posts
+  const paths = posts.map((post) => `/blog/${post.slug}`);
+  console.log(paths);
+  // We'll pre-render only these paths at build time.
+  // { fallback: false } means other routes should 404.
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }) {
+  // const { slug } = context.query;
   const res = await fetch(
-    `${publicRuntimeConfig.API_URL}/blog-posts?slug=${slug}`
+    `${publicRuntimeConfig.API_URL}/blog-posts?slug=${params.slug}`
   );
   const data = await res.json();
   return {
@@ -22,6 +34,16 @@ export async function getServerSideProps(context) {
     },
   };
 }
+
+// export async function getStaticProps({params}) {
+//   const res = await fetch(`${API_URL}/blog-posts/${params.slug}`);
+//   const data = await res.json();
+//   return {
+//     props: {
+//       blog_posts: data,
+//     },
+//   };
+// }
 
 const Posts = ({ post }) => {
   return (

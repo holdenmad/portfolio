@@ -7,8 +7,12 @@ import blogStyles from "../../styles/blog.module.css";
 import Card from "../../components/Card";
 import fetch from "isomorphic-unfetch";
 
-export async function getServerSideProps() {
-  const { API_URL } = process.env;
+const { API_URL } = process.env;
+
+//Use this to make sure dynamic routes are generated statically
+
+
+export async function getStaticProps() {
   const res = await fetch(`${API_URL}/blog-posts`);
   const data = await res.json();
   return {

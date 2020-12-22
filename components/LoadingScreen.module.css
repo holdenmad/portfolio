@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   justify-items: center;
   align-items: center;
@@ -9,4 +10,27 @@
 .loading {
   font-size: xx-large;
   font-family: "Courier New", Courier, monospace;
+}
+
+.loadingIcon {
+  background: linear-gradient(30deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  border-radius: 100%;
+  box-shadow: 0 0 5px grey;
+  width: 100px;
+  height: 100px;
+  margin: 2rem;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

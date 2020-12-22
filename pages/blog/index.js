@@ -11,7 +11,6 @@ const { API_URL } = process.env;
 
 //Use this to make sure dynamic routes are generated statically
 
-
 export async function getStaticProps() {
   const res = await fetch(`${API_URL}/blog-posts`);
   const data = await res.json();

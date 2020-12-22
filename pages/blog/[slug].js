@@ -1,13 +1,13 @@
 import React from "react";
-import Layout from "../../../components/layout";
+import Layout from "../../components/layout";
 import Head from "next/head";
 import Link from "next/link";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
-import utilStyles from "../../../styles/utils.module.css";
-import blogStyles from "../../../styles/blog.module.css";
+import utilStyles from "../../styles/utils.module.css";
+import blogStyles from "../../styles/blog.module.css";
 
-const { publicRuntimeConfig } = getConfig();
+// const { publicRuntimeConfig } = getConfig();
 const { API_URL } = process.env;
 
 export async function getStaticPaths() {
@@ -22,28 +22,24 @@ export async function getStaticPaths() {
   return { paths, fallback: false };
 }
 
+//TO DO: Fix the clickthrough to the slugs of blog posts
 export async function getStaticProps({ params }) {
   // const { slug } = context.query;
-  const res = await fetch(
-    `${publicRuntimeConfig.API_URL}/blog-posts?slug=${params.slug}`
-  );
+  const res = await fetch(`${API_URL}/blog-posts?slug=${params.slug}`);
   const data = await res.json();
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+  
   return {
     props: {
       post: data[0],
     },
   };
 }
-
-// export async function getStaticProps({params}) {
-//   const res = await fetch(`${API_URL}/blog-posts/${params.slug}`);
-//   const data = await res.json();
-//   return {
-//     props: {
-//       blog_posts: data,
-//     },
-//   };
-// }
 
 const Posts = ({ post }) => {
   return (

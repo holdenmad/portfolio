@@ -1,9 +1,13 @@
 import React from "react";
 import Layout from "../../components/layout";
+import BlogLayout from "../../components/blogLayout";
 import Head from "next/head";
 import Link from "next/link";
 import getConfig from "next/config";
 import fetch from "isomorphic-unfetch";
+import unified from "unified";
+import parse from "remark-parse";
+import remark2react from "remark-react";
 import utilStyles from "../../styles/utils.module.css";
 import blogStyles from "../../styles/blog.module.css";
 
@@ -33,7 +37,7 @@ export async function getStaticProps({ params }) {
       notFound: true,
     };
   }
-  
+
   return {
     props: {
       post: data[0],
@@ -48,13 +52,21 @@ const Posts = ({ post }) => {
         <title>{post.BlogTitle}</title>
       </Head>
       <div className={blogStyles.postBody}>
-        <h1 className={blogStyles.blogTitle}>{post.BlogTitle}</h1>
         <img
           alt={post.BlogCover.alternativeText}
           src={post.BlogCover.url}
           className={blogStyles.blogCover}
         />
-        <p className={blogStyles.blogText}>{post.BlogText}</p>
+        <h1 className={blogStyles.blogTitle}>{post.BlogTitle}</h1>
+        <BlogLayout>
+          <div className={blogStyles.blogText}>
+            {
+              //Markdown parser for Strapi data
+              unified().use(parse).use(remark2react).processSync(post.BlogText)
+                .result
+            }
+          </div>
+        </BlogLayout>
       </div>
 
       <div className={blogStyles.backToBlog}>

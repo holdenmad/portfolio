@@ -13,11 +13,10 @@
   padding-bottom: 1rem;
 }
 
-/* 
-//Decide whether to use text shadow or now
 .blogTitle {
   text-shadow: 2px 2px #eee;
-} */
+  text-align: center;
+}
 
 .blogText:first-letter {
   font-size: 3em;

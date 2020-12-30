@@ -32,13 +32,13 @@ export default function Layout({ children, home }) {
           ) : (
             <>
               <Link href="/">
-                <a>
+                {/* <a> */}
                   <img
                     src="/holden_x.jpg"
-                    className={`${styles.headerImage} ${utilStyles.borderCircle} ${utilStyles.imgLink}`}
+                    className={`${styles.headerImage} ${utilStyles.borderCircle} ${utilStyles.imgLink} `}
                     alt={name}
                   />
-                </a>
+                {/* </a> */}
               </Link>
               {/* 
               //Save this for later

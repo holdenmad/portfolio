@@ -51,14 +51,15 @@ const Posts = ({ post }) => {
       <Head>
         <title>{post.BlogTitle}</title>
       </Head>
-      <div className={blogStyles.postBody}>
-        <img
-          alt={post.BlogCover.alternativeText}
-          src={post.BlogCover.url}
-          className={blogStyles.blogCover}
-        />
-        <h1 className={blogStyles.blogTitle}>{post.BlogTitle}</h1>
-        <BlogLayout>
+      <BlogLayout>
+        <div className={blogStyles.postBody}>
+          <img
+            alt={post.BlogCover.alternativeText}
+            src={post.BlogCover.url}
+            className={blogStyles.blogCover}
+          />
+          <h1 className={blogStyles.blogTitle}>{post.BlogTitle}</h1>
+
           <div className={blogStyles.blogText}>
             {
               //Markdown parser for Strapi data
@@ -66,8 +67,8 @@ const Posts = ({ post }) => {
                 .result
             }
           </div>
-        </BlogLayout>
-      </div>
+        </div>
+      </BlogLayout>
 
       <div className={blogStyles.backToBlog}>
         <Link href="/blog">

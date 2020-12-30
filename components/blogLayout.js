@@ -1,13 +1,13 @@
-//TODO: Do further styling for images, etc. 
+//TODO: Do further styling for images, etc.
 
 function BlogLayout(props) {
   return (
     <div className="page-layout">
       {props.children}
       <style jsx global>{`
-      h2 {
+        h2 {
           font-size: x-large;
-      }
+        }
         h2 a,
         div a {
           font-family: Courier, monospace;
@@ -30,6 +30,17 @@ function BlogLayout(props) {
           color: white;
           cursor: pointer;
         }
+        @keyframes gradient {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        } 
       `}</style>
     </div>
   );

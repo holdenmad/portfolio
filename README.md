@@ -10,4 +10,4 @@ This repository holds [my personal portfolio website](https://holdenmad.vercel.a
 - React
 - Strapi
 - Heroku
-- AWS S3
+- AWS S3 

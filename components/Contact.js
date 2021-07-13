@@ -10,7 +10,7 @@ const Contact = ({ home }) => {
           <div>
             <a
               className={utilStyles.navLink}
-              href="mailto:holden.madagame@gmail.com"
+              href="mailto:holdenmad.dev@gmail.com"
             >
               Email
             </a>
@@ -36,7 +36,7 @@ const Contact = ({ home }) => {
         <>
           <div className={styles.socialmediaSmall}>
             <div className={utilStyles.navLinkSmall}>
-              <a href="mailto:holden.madagame@gmail.com">Email</a>
+              <a href="mailto:holdenmad.dev@gmail.com">Email</a>
             </div>
             <div className={utilStyles.navLinkSmall}>
               <a href="http://www.github.com/holdenmad">Github</a>

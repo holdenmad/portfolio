@@ -6,13 +6,15 @@ import homeStyles from "../styles/Home.module.css";
 const skills = [
   "HTML5",
   "CSS3",
-  "Vanilla JavaScript",
-  "Bootstrap",
+  "JavaScript",
+  "Vue.js",
   "React.js",
+  "LESS / SCSS / SASS",
+  "PHP/Laravel",
   "Next.js",
   "React Native",
   "Node.js",
-  "APIs",
+  "REST APIs",
   "SQL/NoSQL",
   "Git",
   "Scrum and Agile",
@@ -24,7 +26,7 @@ export default function Home() {
   return (
     <Layout home>
       <Head>
-        <title>Holden Madagame - Junior Developer</title>
+        <title>Holden Madagame - Frontend Developer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className={utilStyles.headingMd}>
@@ -32,11 +34,11 @@ export default function Home() {
         <p>
           Hi, I'm Holden Madagame{" "}
           <span className={utilStyles.ipa}>/mƏ-'da-gƏ-mi/</span>.{" "}
-          <b>I'm a junior web developer</b> with a background in opera and
-          trans/queer activism.{" "}
+          <b>I'm a junior frontend developer</b> with a background in opera and
+          trans/queer activism. Currently based in Berlin, Germany.{" "}
         </p>
         <p>
-          I am a thoughtful, communicative, and professional young web developer
+          I am a thoughtful, communicative, and professional frontend developer
           who values efficient and structured code. I'm a trained classical
           musician with an eye for perfection, a drive to work for sustainable
           goals and to create beautiful things.
